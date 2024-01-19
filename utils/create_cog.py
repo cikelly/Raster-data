@@ -32,6 +32,7 @@ def create_cog(geotiff_path, overviews=['2', '4', '8', '16', '32', '64', '128', 
     [2] We will then run gdal_translate to create the COG. See Reference [3]
     [3] If we pass a list of GeoTIFFs to `create_cog`, it will call `create_cogs_parallel` to use multi-cores.
     [4] You can run `utils/validate_cloud_optimized_geotiff.py` to confirm if a GeoTIFF is a COG. See Reference [2]
+    [5] Requires GDAL
     '''
     if isinstance(geotiff_paths, str):
         geotiff_paths = [geotiff_paths]
